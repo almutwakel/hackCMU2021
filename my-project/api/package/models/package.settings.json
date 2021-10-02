@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packages",
+  "info": {
+    "name": "Package",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PackageID": {
+      "type": "biginteger"
+    },
+    "ArrivalDate": {
+      "type": "datetime"
+    },
+    "recipient": {
+      "via": "packages",
+      "model": "recipient"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Status": {
+      "type": "string"
+    }
+  }
+}

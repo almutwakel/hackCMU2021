@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recipients",
+  "info": {
+    "name": "Recipient",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Email": {
+      "type": "email"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "packages": {
+      "via": "recipient",
+      "collection": "package"
+    },
+    "timeslot": {
+      "via": "recipients",
+      "model": "timeslot"
+    },
+    "SMC": {
+      "type": "integer"
+    }
+  }
+}

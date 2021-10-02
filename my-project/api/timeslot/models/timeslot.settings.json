@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timeslots",
+  "info": {
+    "name": "Timeslot"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "recipients": {
+      "via": "timeslot",
+      "collection": "recipient"
+    },
+    "Time": {
+      "type": "datetime"
+    }
+  }
+}
