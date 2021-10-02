@@ -36,10 +36,15 @@ module.exports = {
 
     async update(ctx) {
         const { SMC } = ctx.params;
-    
+        const timeslotID = ctx.query.id;
+        console.log(timeslotID);
+
+        let timeslotSelection = await strapi.services.timeslot.findOne({ id: timeslotID });
+        let userSelection = await strapi.services.recipient.findOne({ SMC });
+        userSelection.timeslot = timeslotSelection;
         let entity;
-        entity = await strapi.services.recipient.update({ SMC }, ctx.request.body);
-    
+        entity = await strapi.services.recipient.update({ SMC }, userSelection);
+        
         return sanitizeEntity(entity, { model: strapi.models.recipient });
       },
 
