@@ -1,4 +1,4 @@
-const { sanitizeEntity } = require('strapi-utils');
+const { sanitizeEntity, convertRestQueryParams } = require('strapi-utils');
 
 module.exports = {
   /**
@@ -11,10 +11,17 @@ module.exports = {
         const { SMC } = ctx.params;
 
         const entity = await strapi.services.recipient.findOne({ SMC });
-        return sanitizeEntity(entity, { model: strapi.models.recipient });
+        const data = this.readUserData(sanitizeEntity(entity, { model: strapi.models.recipient }));
+        return data;
+        // return sanitizeEntity(entity, { model: strapi.models.recipient });
 },
-    async sendUserData(ctx) {
-        return;
+
+    async readUserData(ctx) {
+        console.log(ctx);
+        const SMC = ctx.SMC;
+        const packages = ctx.packages;
+        const timeslot = ctx.timeslot;
+        return {"SMC": SMC, "packages": packages, "timeslot": timeslot};
 }
 
 };
