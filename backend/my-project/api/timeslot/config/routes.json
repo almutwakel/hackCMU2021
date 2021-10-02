@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/timeslots",
-      "handler": "timeslot.numAvailable",
+      "handler": "timeslot.timeslotsAvailable",
       "config": {
         "policies": []
       }

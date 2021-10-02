@@ -29,9 +29,6 @@ module.exports = {
             "packages": packages, 
             "timeslot": timeslot
         } );
-
-
-
     },
 
     async update(ctx) {

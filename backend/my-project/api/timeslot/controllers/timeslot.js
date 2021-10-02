@@ -18,7 +18,7 @@ const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
 module.exports = {
 
     //returns array of available timeslots (< 5 people)
-    async numAvailable (ctx) {
+    async timeslotsAvailable (ctx) {
         const entities = await strapi.services.timeslot.find(ctx.query);
         const valid = new Array();
         for(let i = 0; i < entities.length; i++){
