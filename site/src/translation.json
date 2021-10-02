@@ -1,0 +1,31 @@
+{
+    "en": {
+        "translation": {
+
+            "Login Header": "Carnegie Mellon Mailroom Portal",
+            "Login Title": "Login to CMU Mailroom Portal",
+            "Login Button": "Login",
+            "Incorrect Login": "Incorrect Login Details",
+            "Email": "Email",
+            "SMCNumber": "SMC Number",
+
+            "Package Table Title": "Package Status",
+            "Package ID": "Package ID",
+            "Status": "Status",
+
+            "Time Slot": "Time Slot",
+
+            "Error Title": "Error",
+            "Error 401 Message": "Token has expired or is incorrect",
+
+            "Logout Title": "Logout",
+            "Logout Message": "Are you sure you want to logout?",
+            
+            "Ok": "Ok",
+            "Yes": "Yes",
+            "Cancel": "Cancel"
+
+        }
+    }
+}
+
