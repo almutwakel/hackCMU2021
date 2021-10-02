@@ -34,7 +34,7 @@
     },
     {
       "method": "PUT",
-      "path": "/recipients/:id",
+      "path": "/recipients/:SMC",
       "handler": "recipient.update",
       "config": {
         "policies": []
@@ -42,7 +42,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/recipients/:id",
+      "path": "/recipients/:SMC",
       "handler": "recipient.delete",
       "config": {
         "policies": []
